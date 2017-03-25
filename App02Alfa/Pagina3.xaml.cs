@@ -11,5 +11,10 @@ namespace App02Alfa
 		{
 			InitializeComponent();
 		}
+
+		void Handle_Clicked(object sender, System.EventArgs e)
+		{
+			Navigation.PopModalAsync();
+		}
 	}
 }

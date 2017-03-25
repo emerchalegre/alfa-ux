@@ -8,7 +8,8 @@ namespace App02Alfa
 		{
 			InitializeComponent();
 
-			MainPage = new App02AlfaPage();
+			//MainPage = new App02AlfaPage();
+			MainPage = new NavigationPage(new App02AlfaPage());
 		}
 
 		protected override void OnStart()
