@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App02Alfa.Pagina2">
-	<ContentPage.Content>
-		<ScrollView>
-			<StackLayout>
-				<Editor Text="lsakçndfpiouwanfpwqfwipuefnwpeiufnewkçfnpwoufnnwefe
-					w
-					fnwefpiuewbfçkjewbpfpiuew dfpkewbfoqwnfpwierfhwqlkdnbepqwuohfb"
-					></Editor>
-				<Button Text="Voltar" Clicked="Handle_Clicked"></Button>
-			</StackLayout>
-		</ScrollView>
-	</ContentPage.Content>
+	<Grid Padding="10" BackgroundColor="Silver">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<ListView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding Nomes}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding .}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+		<Button StyleClass="Primary" Grid.Row="1" Grid.Column="0" Text="Voltar" Clicked="Handle_Clicked"></Button>
+		<Button StyleClass="Danger" Grid.Row="1" Grid.Column="1" Text="Excluir"></Button>
+	</Grid>
 </ContentPage>

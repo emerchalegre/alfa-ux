@@ -4,6 +4,11 @@ namespace App02Alfa
 {
 	public partial class App02AlfaPage : ContentPage
 	{
+		public string Email { get; set; }
+		public string Senha { get; set; }
+		public Command CmdNavegar { get; set; }
+		public Command CmdOpenWs { get; set; }
+
 		public App02AlfaPage()
 		{
 			if (Device.OS == TargetPlatform.iOS) {
@@ -15,6 +20,23 @@ namespace App02Alfa
 			InitializeComponent();
 
 			lbl.Text = "Aula de UX";
+
+			Email = "emerchalegre@gmail.com";
+			CmdNavegar = new Command(Navegar);
+			CmdOpenWs = new Command(OpenWs);
+
+			BindingContext = this;
+
+		}
+
+		void OpenWs()
+		{
+			Navigation.PushAsync(new Anuncios());
+		}
+
+		void Navegar()
+		{
+			Navigation.PushAsync(new Pagina2());
 		}
 
 		void Handle_Clicked(object sender, System.EventArgs e)

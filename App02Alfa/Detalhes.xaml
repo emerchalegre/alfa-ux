@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App02Alfa.Detalhes">
+	<StackLayout>
+		<Label Text="{Binding anuncio.Titulo}"></Label>
+		<Image Source="{Binding anuncio.Src}"></Image>
+		<Label Text="{Binding anuncio.Valor}"></Label>
+	</StackLayout>
+</ContentPage>
